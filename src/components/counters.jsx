@@ -11,14 +11,17 @@ class Counters extends Component {
         >
           Reset
         </button>
-        {this.props.counters.map((c) => (
-          <Counter
-            key={c.id}
-            counter={c}
-            onDelete={this.props.onDelete}
-            onIncrement={this.props.onIncrement}
-          />
-        ))}
+        <div className="container">
+          {this.props.counters.map((c) => (
+            <Counter
+              key={c.id}
+              counter={c}
+              onDelete={this.props.onDelete}
+              onIncrement={this.props.onIncrement}
+              onDecrement={this.props.onDecrement}
+            />
+          ))}
+        </div>
       </div>
     );
   }
